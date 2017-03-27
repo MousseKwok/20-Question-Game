@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question text="Does it have a happy ending?">
+	<answer useranswer="yes">
+		<question text="Is it an animation movie?">
+			<answer useranswer="yes">
+				<question text="Is it an American animation movie?">
+					<answer useranswer="yes">
+						<question text="Is it made by Disney?">
+							<answer useranswer="yes">
+								<thing>Frozen</thing>
+							</answer>
+							<answer useranswer="no">
+								<thing>Finding Nemo</thing>
+							</answer>
+						</question>
+					</answer>
+					<answer useranswer="no">
+						<question text="Is it made by Ghibli?">
+							<answer useranswer="yes">
+								<thing>Spirited Away</thing>
+							</answer>
+							<answer useranswer="no">
+								<thing>The Triplets of Belleville</thing>
+							</answer>
+						</question>
+					</answer>
+				</question>
+			</answer>
+			<answer useranswer="no">
+				<question text="Is it a romance movie?">
+					<answer useranswer="yes">
+						<question text="Is Audrey Hepburn the heroine?">
+							<answer useranswer="yes">
+								<thing>Roman Holiday</thing>
+							</answer>
+							<answer useranswer="no">
+								<thing>Love Actually</thing>
+							</answer>
+						</question>
+					</answer>
+					<answer useranswer="no">
+						<question text="Is it about superhero?">
+							<answer useranswer="yes">
+								<thing>Iron Man</thing>
+							</answer>
+							<answer useranswer="no">
+								<thing>Harry Potter</thing>
+							</answer>
+						</question>
+					</answer>
+				</question>
+			</answer>
+		</question>
+	</answer>
+	<answer useranswer="no">
+		<question text="Is it a black-and-white movie?"> 
+			<answer useranswer="yes">
+				<question text="Is Hitchcock the director?">
+					<answer useranswer="yes">
+						<question text="Did it win Oscar Best Picture Award?">
+							<answer useranswer="yes">
+								<thing>Rebecca</thing>
+							</answer>
+							<answer useranswer="no">
+								<thing>Psycho</thing>
+							</answer>
+						</question>
+					</answer>
+					<answer useranswer="no">
+						<question text="Is it related to World War2?">
+							<answer useranswer="yes">
+								<thing>Casablanca</thing>
+							</answer>
+							<answer useranswer="no">
+								<thing>Sunset Boulevard</thing>
+							</answer>
+						</question>
+					</answer>
+				</question>
+			</answer>
+			<answer useranswer="no">
+				<question text="Is it directed by Ang Lee?">
+					<answer useranswer="yes">
+						<question text="Is it an Asian movie?">
+							<answer useranswer="yes">
+								<thing>Crouching Tiger, Hidden Dragon</thing>
+							</answer>
+							<answer useranswer="no">
+								<thing>Brokeback Mountain</thing>
+							</answer>
+						</question>
+					</answer>
+					<answer useranswer="no">
+						<question text="Does it have high box office?">
+							<answer useranswer="yes">
+								<thing>Titanic</thing>
+							</answer>
+							<answer useranswer="no">
+								<thing>Fight Club</thing>
+							</answer>
+						</question>
+					</answer> 
+				</question>
+			</answer>
+		</question>
+	</answer>
+</question>
