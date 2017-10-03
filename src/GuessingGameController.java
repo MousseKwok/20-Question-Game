@@ -140,7 +140,7 @@ public class GuessingGameController extends JPanel implements ActionListener{
 		//Decide which button we are interacting with
 		JButton src = (JButton) e.getSource();
 		if(src == startButton) {
-			//Set ifGameStart to true to represent we have started game
+			
 			ifGameStart = true;
 
 			DefaultBinaryTreeNode<String> movieTreeRoot = (DefaultBinaryTreeNode<String>) movieTree.getRoot();
@@ -160,9 +160,9 @@ public class GuessingGameController extends JPanel implements ActionListener{
 		else if(src == yesButton) {
 			//Check if the game has started and the node is not a leaf node
 			if(!lastRound() && ifGameStart) {
-				//Get the left child of the current node
+				
 				movieTreeNode = (DefaultBinaryTreeNode<String>) movieTreeNode.getLeftChild();
-				//Get the data of the node and set text of the JLabel
+				
 				String yes = movieTreeNode.getData();
 				questionLabel.setText(yes);
 			}
@@ -170,20 +170,19 @@ public class GuessingGameController extends JPanel implements ActionListener{
 			//Make sure the game has started and the node is the last one, that means the user wins
 			//Pop a message window 
 			else if(lastRound() && ifGameStart){
+				
 				JOptionPane.showMessageDialog(null, "Congratulations, you got the right answer!");
-				//Set it to true if the user has win
 				ifWin = true;
-			} 
+			} 	
 			
 		}
 
 		else if(src == noButton){
 			//Make sure the game has started and the node is not the last one
 			if(!lastRound() && ifGameStart) {
-				//Get the right child of the current node
+				
 				movieTreeNode = (DefaultBinaryTreeNode<String>) movieTreeNode.getRightChild();
 				
-				//Get the data of the node and set text of the JLabel
 				String no = movieTreeNode.getData();
 				questionLabel.setText(no);
 			}
