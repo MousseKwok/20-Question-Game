@@ -55,8 +55,7 @@ public class MovieFileReader {
 		//Get the first element node in the tree and parse the node 
 		Node docRoot =  document.getDocumentElement();
 		DefaultBinaryTreeNode<String> movieRoot = parseQuestion(docRoot);
-		
-		//Set the root of the tree
+	
 		tree.setRoot(movieRoot);
 		return tree;
 	}
@@ -70,7 +69,6 @@ public class MovieFileReader {
 		//Get the question after "text" and store it to a binary tree node
 		DefaultBinaryTreeNode<String> movieNode = new DefaultBinaryTreeNode<String>(((Element) n).getAttribute("text"));
 
-		//Get all child nodes 
 		NodeList childNodes = n.getChildNodes();
 		//Loop through all child nodes
 		for (int i = 0; i < childNodes.getLength(); i++) {
