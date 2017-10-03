@@ -143,22 +143,22 @@ public class UnrestrictedGuessingGameController extends JPanel implements Action
 
 		//Represents the new answer and new question 
 		String newAnswer = "";
-	    String newQuestion = "";
+	        String newQuestion = "";
 		
 		String newObject = JOptionPane.showInputDialog(instruction1);
 		
 		//If the user does not click on the cancel button, pop up the second window
 		if(newObject != null) {
-			//Get the user's input of the question
+			
 			newQuestion = JOptionPane.showInputDialog(instruction2);
 			
 			//If the user does not click on the cancel button, pop up the third window
 			if(newQuestion != null) {
-				//Get the user's input of the answer
+				
 				newAnswer = JOptionPane.showInputDialog(instruction3);
 				
 				if(newAnswer != null) {
-					//Set the data of the last node as a question 
+					
 					movieTreeNode.setData(newQuestion);
 					
 					//Check what the answer of the question is 
@@ -186,15 +186,13 @@ public class UnrestrictedGuessingGameController extends JPanel implements Action
 	 * Implement activities related to JButtons
 	 */
 	public void actionPerformed(ActionEvent e) {
-		//Decide which button we are interacting with
 		JButton src = (JButton) e.getSource();
 
 		if(src == startButton) {
 			//Set it to true to mark the start of the game
 			ifGameStart = true;
 			DefaultBinaryTreeNode<String> movieTreeRoot = (DefaultBinaryTreeNode<String>) movieTree.getRoot();
-			
-			//Get the data in the root node and set the text of the question label
+		
 			String start = movieTreeRoot.getData();
 			questionLabel.setText(start);
 			
@@ -202,15 +200,14 @@ public class UnrestrictedGuessingGameController extends JPanel implements Action
 			//So let the movie node start from tree root again
 			movieTreeNode = movieTreeRoot;
 			
-			//Set it to false when the user restarts the game
 			ifWin = false;
 		}
 
 		else if(src == yesButton) {
+			
 			//Make sure the game has started and the node is not a leaf node
 			if(!lastRound() && ifGameStart) {
-				//Get the left child of the current node, get the data of it, and set text 
-				//of the JLabel according to the data
+				
 				movieTreeNode = (DefaultBinaryTreeNode<String>) movieTreeNode.getLeftChild();
 				String yes = movieTreeNode.getData();
 				questionLabel.setText(yes);
@@ -228,10 +225,10 @@ public class UnrestrictedGuessingGameController extends JPanel implements Action
 		}
 
 		else if(src == noButton){
+			
 			////Make sure the game has started and the node is not the last one
 			if(!lastRound() && ifGameStart) {
-				//Get the right child of the current node, get its data and set
-				//text of the JLabel according to the data
+				
 				movieTreeNode = (DefaultBinaryTreeNode<String>) movieTreeNode.getRightChild();
 				String no = movieTreeNode.getData();
 				questionLabel.setText(no);
